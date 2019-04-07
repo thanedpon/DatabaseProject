@@ -1,8 +1,15 @@
 
 <center><h1>Teacher Page</h1></center>
 
+
 {% for i in teacher_item %}
-{{i.Tname}}
-{{i.Nickname}}
-{{i.Tsex}}
+
+<table>
+  <from method="POST" action="/teacher/detail/{{ i.id }}">
+    <tr><td><a href="/teacher/detail/{{ i.id }}">{{i.Tname}}</a></td></tr>
+    {% csrf_token %}
+    
+  </from>
+
 {% endfor %}
+</table>

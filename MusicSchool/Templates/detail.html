@@ -1,0 +1,17 @@
+<html>
+    <title>Detail</title>
+    <center><h1>{{ items.Sname }}</h1></center>
+    <body>
+        <h3>Nickname : {{items.Snickname}}</h3>
+        <h3>Age : {{items.Age}}</h3>
+        <h3>Sex : {{items.Ssex}}</h3>
+        <h3>Tell : {{items.Pnum}}</h3>
+        <h3>Course</h3>
+        {% for i in show_study %}
+            <ul><h4>Course name : {{i.course}}</h4></ul>
+            <ul><h4>Level : {{i.Level}}</h4></ul>
+            <ul><h4>Day : {{i.Learn_day}}</h4></ul>
+            
+        {% endfor %}
+    </body>
+</html>
