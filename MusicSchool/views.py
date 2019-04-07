@@ -17,6 +17,10 @@ def teacher_page(request):
     teacher_item = Teacher.objects.all()
     return render(request,'teacher.html', {'teacher_item':teacher_item})
 
+def course_page(request):
+    course_item = Course.objects.all()
+    return render(request,'course.html',{'course_item':course_item, 'show_study':show_study})
+
 def detail_page_student(request, item_id):
     items = Student.objects.get(id=item_id)
     show_study = Study.objects.all().filter(course_id=item_id)

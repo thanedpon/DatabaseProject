@@ -1,0 +1,14 @@
+<html>
+<center><h1>Course Page</h1></center>
+{% for i in course_item %}
+
+<table>
+  <from method="POST" action="/course/detail/{{ i.id }}">
+    <tr><td><a href="/course/detail/{{ i.id }}">{{i.Cname}}</a></td></tr>
+    {% csrf_token %}
+    
+  </from>
+
+{% endfor %}
+</table>
+</html>
