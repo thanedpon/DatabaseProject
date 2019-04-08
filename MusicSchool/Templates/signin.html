@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Music School</title>
+    <title>Signin</title>
     {% load staticfiles %}
     <link rel='stylesheet' href= "{% static 'css/bootstrap.min.css' %}"
     type = 'text/css'/>
@@ -18,8 +18,7 @@
 		}
 	</style>
 </head>
-
-<body class="body" style="background-color:#f6f6f6">
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href='/'>Music_school</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,29 +50,23 @@
     </form>
   </div>
 </nav>
-<table class="table table-hover table-dark ">
-    <thead>
-     <tr>
-      <th scope="col">Course</th>
-      <th scope="col">Hours</th>
-      <th scope="col">Price</th>
-      <th scope="col"></th>
-     </tr>
-    </thead>
-    <tbody>
-    {% for post in courses %}
-    <tr>
-             <td>{{post.Cname}}</td>
-             <td>{{post.Hours}}</td>
-             <td>{{post.Price}}</td>
-             <td><p></p></td>
-    </tr>
-<!--             <td><p>
-                 <div> </div>
-                 </p></td>
--->
-    {% endfor %}
-    </tbody>
-    </table>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-check">
+    </div>
+  <button type="submit" class="btn btn-primary">Log in</button>
+</form></div></div>
 </body>
 </html>
