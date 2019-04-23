@@ -51,6 +51,8 @@ def sign_in(request):
     return render(request, 'signin.html', context)
 
 def addData(request):
+        return render(request, 'addData.html')
+def addStudent(request):
         if request.method == 'POST':
                 add_student = Student(Sname=request.POST.get('s_name',''),
                 Snickname=request.POST.get('s_nickname',''),
@@ -59,6 +61,28 @@ def addData(request):
                 Ssex=request.POST.get('s_sex',''))
                 add_student.save()
                 return redirect('http://localhost:8000/')
-        return render(request, 'addData.html')
+        return render(request, 'addStudent.html')
+
+def addTeacher(request):
+        if request.method == 'POST':
+                add_teacher = Teacher(Tname=request.POST.get('s_name',''),
+                Tnickname=request.POST.get('t_nickname',''),
+                Temail=request.POST.get('t_email',''),
+                Ttel=request.POST.get('t_pnum',''),
+                Tsex=request.POST.get('t_sex',''))
+                add_teacher.save()
+                return redirect('http://localhost:8000/')
+        return render(request, 'addTeacher.html')
+
+def addCourse(request):
+        if request.method == 'POST':
+                add_course = Course(Cname=request.POST.get('c_name',''),
+                Hours=request.POST.get('h',''),
+                Price=request.POST.get('p',''))
+                add_course.save()
+                return redirect('http://localhost:8000/')
+        return render(request, 'addCourse.html')
+
+
 
         
