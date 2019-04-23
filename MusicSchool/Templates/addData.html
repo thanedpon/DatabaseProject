@@ -1,0 +1,28 @@
+<html>
+    <head> 
+        <title>Add Student</title>
+        <center><h1>Add Student</h1></center>
+    </head>
+    <body>
+        <form method="POST">
+            <h3>Student name</h3>
+            <input name="s_name" placeholder="enter student name">
+            <h3>Student Nick name</h3>
+            <input name="s_nickname" placeholder="enter student nick name">
+            <h3>Age</h3>
+            <input name="s_age" placeholder="enter student age">
+            <h3>Phone number</h3>
+            <input name="s_pnum" placeholder="enter phone number">
+            <h3>sex</h3>
+            <input name="s_sex" placeholder="enter male or female">
+            <br>
+            <br>
+            <input type="submit" name="enter">
+            {% csrf_token %}
+        
+        
+        </form>
+    </body>
+
+
+</html>

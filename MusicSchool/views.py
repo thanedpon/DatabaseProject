@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.template import loader
 from MusicSchool.models import Student, Teacher, Course, Study, Teach
@@ -49,3 +49,16 @@ def sign_in(request):
         'students': Student.objects.all(),
         'teachers': Teacher.objects.all(),}
     return render(request, 'signin.html', context)
+
+def addData(request):
+        if request.method == 'POST':
+                add_student = Student(Sname=request.POST.get('s_name',''),
+                Snickname=request.POST.get('s_nickname',''),
+                Age=request.POST.get('s_age',''),
+                Pnum=request.POST.get('s_pnum',''),
+                Ssex=request.POST.get('s_sex',''))
+                add_student.save()
+                return redirect('http://localhost:8000/')
+        return render(request, 'addData.html')
+
+        

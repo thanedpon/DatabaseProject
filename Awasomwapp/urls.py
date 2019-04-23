@@ -24,5 +24,6 @@ urlpatterns = [
     path('student/detail/<int:item_id>', views.detail_page_student),
     path('teacher/detail/<int:item_id>', views.detail_page_teacher),
     path('signin', views.sign_in),
+    path('addData/', views.addData)
 ]
 
