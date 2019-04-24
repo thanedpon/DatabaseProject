@@ -39,30 +39,42 @@
     </ul></div>
 </nav>
 <form method="POST">
-  <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputName">&nbsp Name</label>
-      <input type="text" class="form-control" id="inputName" name="s_name" placeholder="Aungticha Chomwiwat">
+      <label for="course">&nbsp Course</label>
+      <select class="custom-select mr-sm-2" id="course" name="course">
+        <option selected>Choose...</option>
+          {% for  i in course %}
+        <option value={{i.Cname}}>{{i}}</option>
+          {% endfor %}
+      </select>
     </div>
     <div class="form-group col-md-2">
-    <label for="inputNickName">&nbsp Nickname</label>
-    <input type="text" class="form-control" id="inputNickName" name="s_nickname" placeholder="Ice">
+    <label for="teacher">&nbsp Teacher</label>
+      <select class="custom-select mr-sm-2" id="teacher" name="teacher">
+        <option selected>Choose...</option>
+          {% for  i in teacher %}
+        <option value={{i.Tname}}>{{i}}</option>
+          {% endfor %}
+      </select>
     </div>
+  <div class="form-group">
+    <label for="Teachday">&nbsp Teach Day</label>
+    <input type="text" class="form-control" id="Teachday" name="day" placeholder="Monday">
   </div>
   <div class="form-group">
-    <label for="inputAge">&nbsp Age</label>
-    <input type="text" class="form-control" id="inputAge" name="s_age" placeholder="20">
-  </div>
-  <div class="form-group">
-    <label for="inputPhonenum">&nbsp Phone number</label>
-    <input type="text" class="form-control" id="inputPhonenum" name="s_pnum" placeholder="XXX-XXX-XXXX">
-  </div>
-  <div class="form-group">
-    <label for="Sex">&nbsp Sex</label>
-    <input type="text" class="form-control" id="Sex" name="s_sex" placeholder="male/female">
+    <label for="Teachhour">&nbsp Teach Hour</label>
+      <select class="custom-select mr-sm-2" id="teachhour" name="hour">
+        <option selected>Choose...</option>
+        <option value="8:00">8:00</option>
+        <option value="10:00">10:00</option>
+        <option value="13:00">13:00</option>
+        <option value="15:00">15:00</option>
+        <option value="17:00">17:00</option>
+      </select>
   </div>
   <button type="submit" class="btn btn-primary">Enter</button>
     {% csrf_token %}
 </form>
 </body>
 </html>
+

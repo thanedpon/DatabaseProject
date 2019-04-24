@@ -26,5 +26,7 @@ urlpatterns = [
     path('addStudent/', views.addStudent),
     path('addTeacher/', views.addTeacher),
     path('addCourse/',views.addCourse),
+    path('addTeach/', views.addTeach),
+    path('addStudy/', views.addStudy),
 ]
 

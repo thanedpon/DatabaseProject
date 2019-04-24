@@ -31,9 +31,6 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Student</a>
-        {{courses}}
-        {{students}}
-        {{teachers}}
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for student in students %}
             <a class="dropdown-item" href="/student/detail/{{student.id}}">{{student}}</a>
@@ -57,7 +54,7 @@
             <a class="dropdown-item" href="/addStudent">student</a>
             <a class="dropdown-item" href="/addTeacher">teacher</a>
             <a class="dropdown-item" href="/addCourse">course</a>
-            <a class="dropdown-item" href="/addTeacher">teach</a>
+            <a class="dropdown-item" href="/addTeach">teach</a>
             <a class="dropdown-item" href="/addStudy">Study</a>
         </div></li>
     </ul>

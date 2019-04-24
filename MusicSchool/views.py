@@ -64,6 +64,34 @@ def addCourse(request):
                 return redirect('http://localhost:8000/')
         return render(request, 'addCourse.html')
 
+def addTeach(request):
+        context = {
+            'course': Course.objects.all(),
+            'teacher': Teacher.objects.all(),
+        }
+        if request.method == 'POST':
+            add_teach = Teach(course=request.POST.get('course',''),
+            teacher = request.POST.get('teacher',''),
+            Teach_day = request.POST.get('day',''),
+            Teach_hour= request.POST.get('hour',''))
+            add_teach.save()
+            return redirect('http://localhost:8000/')
+        return render(request, 'addTeach.html', context)
 
-
-        
+def addStudy(request):
+        context = {
+            'course': Course.objects.all(),
+            'student': Student.objects.all(),
+        }
+        if request.method == 'POST':
+            add_study = Study(student=request.POST.get('student',''),
+            course = request.POST.get('course',''),
+            Startd = request.POST.get('startday',''),
+            Stopd = request.POST.get('stopday',''),
+            Learn_day = request.POST.get('Learnday', ''),
+            Learn_hour = request.POST.get('Learnhour', ''),
+            Level = request.POST.get('level', ''),
+            period = request.POST.get('period',''))
+            add_study.save()
+            return redirect('http://localhost:8000/')
+        return render(request, 'addStudy.html', context)

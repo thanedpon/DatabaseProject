@@ -34,6 +34,7 @@ class Study(models.Model):
     Level = models.CharField(max_length=255)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    period = models.IntegerField(max_length=255)
     class Meta:
         indexes = [
             models.Index(fields=['student',]),
