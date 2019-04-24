@@ -43,12 +43,6 @@ def detail_page_teacher(request, item_id):
 #        'teachers': Teacher.objects.all(),
 #    }
 #    return render_to_response('course.html',context)
-def sign_in(request):
-    context = {
-        'courses': Course.objects.all(),
-        'students': Student.objects.all(),
-        'teachers': Teacher.objects.all(),}
-    return render(request, 'signin.html', context)
 
 def addData(request):
         return render(request, 'addData.html')

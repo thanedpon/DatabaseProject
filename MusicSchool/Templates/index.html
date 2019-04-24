@@ -22,7 +22,6 @@
 <body class="body" style="background-color:#f6f6f6">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href='/'>Music_school</a>
-  <a class="navbar-brand" href='addData/'>Add Data</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,7 +36,8 @@
             <a class="dropdown-item" href="/student/detail/{{student.id}}">{{student}}</a>
             {% endfor %}
         </div>
-    </li><li class="nav-item dropdown">
+    </li>
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Teacher</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,9 +46,17 @@
             {% endfor %}
         </div>
     </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add Data</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/addStudent">student</a>
+            <a class="dropdown-item" href="/addTeacher">teacher</a>
+            <a class="dropdown-item" href="/addCourse">course</a>
+            <a class="dropdown-item" href="/addTeacher">teach</a>
+            <a class="dropdown-item" href="/addStudy">Study</a>
+        </div></li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-    <input button class="btn btn-outline-success my-2 my-sm-0" type="button" value="Sign in" onclick="window.location.href='signin';"/></input>
     </form>
   </div>
 </nav>
