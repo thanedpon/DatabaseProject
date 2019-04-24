@@ -31,15 +31,19 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Student</a>
+        {{courses}}
+        {{students}}
+        {{teachers}}
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for student in students %}
             <a class="dropdown-item" href="/student/detail/{{student.id}}">{{student}}</a>
             {% endfor %}
         </div>
     </li>
-      <li class="nav-item dropdown">
+    <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Teacher</a>
+
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for teacher in teachers %}
             <a class="dropdown-item" href="/teacher/detail/{{teacher.id}}">{{teacher}}</a>
