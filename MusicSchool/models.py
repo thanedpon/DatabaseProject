@@ -27,14 +27,13 @@ class Course(models.Model):
         return self.Cname
 
 class Study(models.Model):
-    Startd = models.DateTimeField(default=datetime.now, blank=True)
-    Stopd = models.DateTimeField(default=datetime.now, blank=True)
+    Startd = models.CharField(max_length=255)
+    Stopd = models.CharField(max_length=255)
     Learn_day = models.CharField(max_length=255)
     Learn_hour = models.CharField(max_length=255)
     Level = models.CharField(max_length=255)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    period = models.IntegerField(max_length=255)
     class Meta:
         indexes = [
             models.Index(fields=['student',]),

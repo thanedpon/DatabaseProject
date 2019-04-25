@@ -42,11 +42,21 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="student">&nbsp Student</label>
-      <input type="text" class="form-control" id="student" name="student" placeholder="Aungticha Chomwiwat">
+      <select class="custom-select mr-sm-2" id="student" name="student" placeholder="Aungticha Chomwiwat">
+        <option selected>Choose...</option>
+          {% for  i in student %}
+        <option value={{i.Sname}}>{{i}}</option>
+          {% endfor %}
+      </select>
     </div>
     <div class="form-group col-md-2">
     <label for="course">&nbsp Course</label>
-    <input type="text" class="form-control" id="course" name="course" placeholder="Guitar">
+      <select class="custom-select mr-sm-2" id="course" name="course" placeholder="Guitar">
+        <option selected>Choose...</option>
+          {% for  i in course %}
+        <option value={{i.Cname}}>{{i}}</option>
+          {% endfor %}
+      </select>
     </div>
   </div>
   <div class="form-group">
@@ -63,19 +73,26 @@
   </div>
   <div class="form-group">
     <label for="learnhour">&nbsp Learn Hour</label>
-    <input type="text" class="form-control" id="learnhour" name="Learnhour" placeholder="hh:mm">
+      <select class="custom-select mr-sm-2" id="learnhour" name="hour">
+        <option selected>Choose...</option>
+        <option value="8:00">8:00</option>
+        <option value="10:00">10:00</option>
+        <option value="13:00">13:00</option>
+        <option value="15:00">15:00</option>
+        <option value="17:00">17:00</option>
+      </select>
   </div>
   <div class="form-group">
     <label for="level">&nbsp Level</label>
-    <input type="text" class="form-control" id="level" name="level" placeholder="easy/medium/hard">
-  </div>
-  <div class="form-group">
-    <label for="period">&nbsp Period</label>
-    <input type="text" class="form-control" id="period" name="period" placeholder="xx">
+      <select class="custom-select mr-sm-2" id="level" name="level">
+        <option selected>Choose...</option>
+        <option value="easy">easy</option>
+        <option value="medium">medium</option>
+        <option value="hard">hard</option>
+      </select>
   </div>
   <button type="submit" class="btn btn-primary">Enter</button>
     {% csrf_token %}
 </form>
 </body>
 </html>
-

@@ -65,28 +65,24 @@ def addCourse(request):
         return render(request, 'addCourse.html')
 
 def addTeach(request):
-
         context = {
-            'course': Course.objects.all(),
-            'teacher': Teacher.objects.all(),
-        }
-        
-
+             'course': Course.objects.all(),
+             'teacher': Teacher.objects.all(),
+         }
+        #check = Teacher.objects.only('id').get(id=teacher_get_id)
+        #print ('check:', check)
         if request.method == 'POST':
-            # filter Teacher table
-            item_t = request.POST.get('teacher_field','')
-            x = Teacher.objects.filter(Tname=item_t)[0]
-            # filter Course table
-            item_c =request.POST.get('course_field','' )
-            c = Course.objects.filter(Cname=item_c)[0]
-
-            add_teach = Teach(course=c,teacher = x,
+            teacher_get_id = request.POST.get('t2','')
+            x = Teacher.objects.filter(Tname=teacher_get_id)[0]
+            course_get_id = request.POST.get('course','')
+            y = Course.objects.filter(Cname=course_get_id)[0]
+            add_teach = Teach(course=y,
+            teacher = x,
             Teach_day = request.POST.get('day',''),
             Teach_hour= request.POST.get('hour',''))
             add_teach.save()
             return redirect('http://localhost:8000/')
-
-        return render(request, 'addTeach.html', context)
+        return render(request, 'addTeach.html',context)
 
 def addStudy(request):
         context = {
@@ -94,14 +90,17 @@ def addStudy(request):
             'student': Student.objects.all(),
         }
         if request.method == 'POST':
-            add_study = Study(student=request.POST.get('student',''),
-            course = request.POST.get('course',''),
+            study_get_id = request.POST.get('student','')
+            Studyid = Student.objects.filter(Sname=study_get_id)[0]
+            course_get_id = request.POST.get('course','')
+            Courseid = Course.objects.filter(Cname=course_get_id)[0]
+            add_study = Study(student=Studyid,
+            course = Courseid,
             Startd = request.POST.get('startday',''),
             Stopd = request.POST.get('stopday',''),
             Learn_day = request.POST.get('Learnday', ''),
             Learn_hour = request.POST.get('Learnhour', ''),
-            Level = request.POST.get('level', ''),
-            period = request.POST.get('period',''))
+            Level = request.POST.get('level', ''))
             add_study.save()
             return redirect('http://localhost:8000/')
         return render(request, 'addStudy.html', context)
