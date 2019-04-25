@@ -65,17 +65,27 @@ def addCourse(request):
         return render(request, 'addCourse.html')
 
 def addTeach(request):
+
         context = {
             'course': Course.objects.all(),
             'teacher': Teacher.objects.all(),
         }
+        
+
         if request.method == 'POST':
-            add_teach = Teach(course=request.POST.get('course',''),
-            teacher = request.POST.get('teacher',''),
+            # filter Teacher table
+            item_t = request.POST.get('teacher_field','')
+            x = Teacher.objects.filter(Tname=item_t)[0]
+            # filter Course table
+            item_c =request.POST.get('course_field','' )
+            c = Course.objects.filter(Cname=item_c)[0]
+
+            add_teach = Teach(course=c,teacher = x,
             Teach_day = request.POST.get('day',''),
             Teach_hour= request.POST.get('hour',''))
             add_teach.save()
             return redirect('http://localhost:8000/')
+
         return render(request, 'addTeach.html', context)
 
 def addStudy(request):

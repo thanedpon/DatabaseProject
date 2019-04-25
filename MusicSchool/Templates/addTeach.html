@@ -41,7 +41,7 @@
 <form method="POST">
     <div class="form-group col-md-6">
       <label for="course">&nbsp Course</label>
-      <select class="custom-select mr-sm-2" id="course" name="course">
+      <select class="custom-select mr-sm-2" id="course" name="course_field">
         <option selected>Choose...</option>
           {% for  i in course %}
         <option value={{i.Cname}}>{{i}}</option>
@@ -50,7 +50,7 @@
     </div>
     <div class="form-group col-md-2">
     <label for="teacher">&nbsp Teacher</label>
-      <select class="custom-select mr-sm-2" id="teacher" name="teacher">
+      <select class="custom-select mr-sm-2" id="teacher" name="teacher_field">
         <option selected>Choose...</option>
           {% for  i in teacher %}
         <option value={{i.Tname}}>{{i}}</option>
