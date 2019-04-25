@@ -9,9 +9,6 @@ def index(request):
         'courses': Course.objects.all(),
         'students': Student.objects.all(),
         'teachers': Teacher.objects.all(),}
-#        'teaches' : Teach.objects.all().filter(),
-#        'items': Teacher.objects.get(id=item_id),
-#        'show_teach': Teach.objects.all().filter(id=item_id)
     return render(request, 'index.html', context)
 
 def detail_page_student(request, item_id):
@@ -20,7 +17,7 @@ def detail_page_student(request, item_id):
         'students': Student.objects.all(),
         'teachers': Teacher.objects.all(),
         'items' : Student.objects.get(id=item_id),
-        'show_study' : Study.objects.all().filter(student_id=item_id)}
+        'show_study' : Study.objects.all().filter(student_id=item_id).order_by('Learn_hour')}
     return render(request, 'detail.html',context)
 
 def detail_page_teacher(request, item_id):
@@ -29,14 +26,13 @@ def detail_page_teacher(request, item_id):
         'students': Student.objects.all(),
         'teachers': Teacher.objects.all(),
         'items' : Teacher.objects.get(id=item_id),
-        'show_teach' : Teach.objects.all().filter(teacher_id=item_id)}
-#    return render(request, 'teacher_detail.html', {'items':items, 'show_teach':show_teach})
+        'show_teach' : Teach.objects.all().filter(teacher_id=item_id).order_by('Teach_hour')}
     return render(request, 'teacher_detail.html', context)
 
 def addStudent(request):
         if request.method == 'POST':
                 add_student = Student(Sname=request.POST.get('s_name',''),
-                Ssurname = request.POST.get('s_surname',''),
+                SSurname = request.POST.get('s_surname',''),
                 Snickname=request.POST.get('s_nickname',''),
                 Age=request.POST.get('s_age',''),
                 Pnum=request.POST.get('s_pnum',''),
@@ -48,7 +44,7 @@ def addStudent(request):
 def addTeacher(request):
         if request.method == 'POST':
                 add_teacher = Teacher(Tname=request.POST.get('t_name',''),
-                Tsurname = request.POST.get('t_surname',''),
+                TSurname = request.POST.get('t_surname',''),
                 Tnickname=request.POST.get('t_nickname',''),
                 Temail=request.POST.get('t_email',''),
                 Ttel=request.POST.get('t_pnum',''),

@@ -65,7 +65,7 @@
 </nav>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">{{items.Tname}}</h1>
+    <h1 class="display-4">{{items.Tname}} &nbsp{{items.TSurname}}</h1>
     <p class="lead">
         <div>Nickname : {{items.Tnickname}}</div>
         <div>Sex : {{items.Tsex}}</div>
@@ -75,12 +75,7 @@
 <table class="table table-bordered table-dark ">
 <thead>
     <tr>
-      <th scope="col">Day</th>
-      <th scope="col">8:00</th>
-      <th scope="col">10:00</th>
-      <th scope="col">13:00</th>
-      <th scope="col">15:00</th>
-      <th scope="col">17:00</th>
+      <th class="col1">Day</th>
     </tr>
   </thead>
     <tbody>
@@ -88,26 +83,21 @@
         <td>Monday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Monday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -116,26 +106,21 @@
         <td>Tuesday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Tuesday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -144,26 +129,21 @@
         <td>Wednesday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Wednesday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -172,26 +152,21 @@
         <td>Thursday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Thursday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -200,26 +175,21 @@
         <td>Friday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Friday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -228,26 +198,21 @@
         <td>Saturday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Saturday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}
@@ -256,26 +221,21 @@
         <td>Sunday</td>
         {% for i in show_teach %}
         {% if i.Teach_day == 'Sunday' %}
-        {% if i.Teach_hour == '8:00' %}
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '10:00' %}
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '13:00' %}
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '15:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
-        {%elif i.Teach_hour == '17:00' %}
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{{i.course}}</td>
+        {% if i.Teach_hour == 8 %}
+        <td class="col2"><p>{{i.course}}
+        (8:00-10:00)</p></td>
+        {%elif i.Teach_hour == 10 %}
+        <td class="col2"><p>{{i.course}}
+        (10:00-12:00)</p></td>
+        {%elif i.Teach_hour == 13 %}
+        <td class="col2"><p>{{i.course}}
+        (13:00-15:00)</p></td>
+        {%elif i.Teach_hour == 15 %}
+        <td class="col2"><p>{{i.course}}
+        (15:00-17:00)</p></td>
+        {%elif i.Teach_hour == 17 %}
+        <td class="col2"><p>{{i.course}}
+        (17:00-19:00)</p></td>
         {% endif %}
         {% endif %}
         {% endfor %}

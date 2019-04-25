@@ -32,7 +32,7 @@ class Study(models.Model):
     Startd = models.CharField(max_length=255)
     Stopd = models.CharField(max_length=255)
     Learn_day = models.CharField(max_length=255)
-    Learn_hour = models.CharField(max_length=255)
+    Learn_hour = models.IntegerField(default=0)
     Level = models.CharField(max_length=255)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
@@ -45,7 +45,7 @@ class Study(models.Model):
 
 class Teach(models.Model):
     Teach_day = models.CharField(max_length=255)
-    Teach_hour = models.CharField(max_length=255)
+    Teach_hour = models.IntegerField(default=0)
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     class Meta:

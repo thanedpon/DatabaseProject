@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c60d100-88ee-448e-846b-981a0775cbc4" name="Default Changelist" comment="Index and CSS">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/Templates/addStudent.html" afterPath="$PROJECT_DIR$/MusicSchool/Templates/addStudent.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/Templates/addStudy.html" afterPath="$PROJECT_DIR$/MusicSchool/Templates/addStudy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/Templates/addTeach.html" afterPath="$PROJECT_DIR$/MusicSchool/Templates/addTeach.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/Templates/addTeacher.html" afterPath="$PROJECT_DIR$/MusicSchool/Templates/addTeacher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/Templates/detail.html" afterPath="$PROJECT_DIR$/MusicSchool/Templates/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html" afterPath="$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/models.py" afterPath="$PROJECT_DIR$/MusicSchool/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicSchool/views.py" afterPath="$PROJECT_DIR$/MusicSchool/views.py" />
     </list>
@@ -27,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicSchool/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            <state relative-caret-position="540">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -42,7 +41,7 @@
       <file leaf-file-name="addTeacher.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addTeacher.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="12">
               <caret line="57" column="90" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="90" />
               <folding />
             </state>
@@ -62,8 +61,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicSchool/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="105" column="50" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
+            <state relative-caret-position="519">
+              <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -71,11 +70,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-120">
+              <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="addStudy.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addStudy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="104" column="88" selection-start-line="104" selection-start-column="88" selection-end-line="104" selection-end-column="88" />
+            <state relative-caret-position="363">
+              <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -84,8 +103,18 @@
       <file leaf-file-name="addStudent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addStudent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="429">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addCourse.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addCourse.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1440">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,38 +123,8 @@
       <file leaf-file-name="addTeach.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addTeach.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Awasomwapp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="1728">
+              <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -150,8 +149,6 @@
         <option value="$PROJECT_DIR$/MusicSchool/admin.py" />
         <option value="$PROJECT_DIR$/MusicSchool/Templates/teacher.html" />
         <option value="$PROJECT_DIR$/MusicSchool/Templates/student.html" />
-        <option value="$PROJECT_DIR$/MusicSchool/Templates/detail.html" />
-        <option value="$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html" />
         <option value="$PROJECT_DIR$/MusicSchool/Templates/signin.html" />
         <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/users/admin.py" />
@@ -159,12 +156,14 @@
         <option value="$PROJECT_DIR$/Awasomwapp/settings.py" />
         <option value="$PROJECT_DIR$/MusicSchool/Templates/index.html" />
         <option value="$PROJECT_DIR$/Awasomwapp/urls.py" />
+        <option value="$PROJECT_DIR$/MusicSchool/Templates/addTeacher.html" />
+        <option value="$PROJECT_DIR$/MusicSchool/Templates/addStudy.html" />
         <option value="$PROJECT_DIR$/MusicSchool/Templates/addTeach.html" />
         <option value="$PROJECT_DIR$/MusicSchool/Templates/addStudent.html" />
-        <option value="$PROJECT_DIR$/MusicSchool/Templates/addTeacher.html" />
+        <option value="$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html" />
         <option value="$PROJECT_DIR$/MusicSchool/views.py" />
-        <option value="$PROJECT_DIR$/MusicSchool/Templates/addStudy.html" />
         <option value="$PROJECT_DIR$/MusicSchool/models.py" />
+        <option value="$PROJECT_DIR$/MusicSchool/Templates/detail.html" />
       </list>
     </option>
   </component>
@@ -737,20 +736,6 @@
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/teacher.html" />
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/student.html" />
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/course.html" />
-    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="70" column="25" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -780,14 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MusicSchool/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addData.html" />
     <entry file="file://$PROJECT_DIR$/Awasomwapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -805,25 +782,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1440">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MusicSchool/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addTeach.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
+        <state relative-caret-position="1728">
+          <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addStudy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addStudent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        <state relative-caret-position="429">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addTeacher.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="12">
           <caret line="57" column="90" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="90" />
           <folding />
         </state>
@@ -831,29 +832,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="105" column="50" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
+        <state relative-caret-position="519">
+          <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/addStudy.html">
+    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/teacher_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="104" column="88" selection-start-line="104" selection-start-column="88" selection-end-line="104" selection-end-column="88" />
+        <state relative-caret-position="-120">
+          <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MusicSchool/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state relative-caret-position="540">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MusicSchool/Templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
