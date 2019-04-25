@@ -3,6 +3,7 @@ from datetime import datetime
 # Create your models here.
 class Teacher(models.Model):
     Tname = models.CharField(max_length=255)
+    TSurname = models.CharField(max_length=255, null=True)
     Tnickname = models.CharField(max_length=255)
     Tsex = models.CharField(max_length=255)
     Ttel = models.CharField(max_length=255, null=True)
@@ -12,6 +13,7 @@ class Teacher(models.Model):
 
 class Student(models.Model):
     Sname = models.CharField(max_length=255)
+    SSurname = models.CharField(max_length=255, null=True)
     Snickname = models.CharField(max_length=255)
     Age = models.IntegerField(default=0)
     Ssex = models.CharField(max_length=255)
@@ -34,6 +36,7 @@ class Study(models.Model):
     Level = models.CharField(max_length=255)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    period = models.IntegerField(default=0, null=True)
     class Meta:
         indexes = [
             models.Index(fields=['student',]),

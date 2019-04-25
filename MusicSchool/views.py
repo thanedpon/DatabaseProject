@@ -36,6 +36,7 @@ def detail_page_teacher(request, item_id):
 def addStudent(request):
         if request.method == 'POST':
                 add_student = Student(Sname=request.POST.get('s_name',''),
+                Ssurname = request.POST.get('s_surname',''),
                 Snickname=request.POST.get('s_nickname',''),
                 Age=request.POST.get('s_age',''),
                 Pnum=request.POST.get('s_pnum',''),
@@ -47,6 +48,7 @@ def addStudent(request):
 def addTeacher(request):
         if request.method == 'POST':
                 add_teacher = Teacher(Tname=request.POST.get('t_name',''),
+                Tsurname = request.POST.get('t_surname',''),
                 Tnickname=request.POST.get('t_nickname',''),
                 Temail=request.POST.get('t_email',''),
                 Ttel=request.POST.get('t_pnum',''),
@@ -100,7 +102,8 @@ def addStudy(request):
             Stopd = request.POST.get('stopday',''),
             Learn_day = request.POST.get('Learnday', ''),
             Learn_hour = request.POST.get('Learnhour', ''),
-            Level = request.POST.get('level', ''))
+            Level = request.POST.get('level', ''),
+            period = request.POST.get('period',''))
             add_study.save()
             return redirect('http://localhost:8000/')
         return render(request, 'addStudy.html', context)

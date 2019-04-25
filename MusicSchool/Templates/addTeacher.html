@@ -42,16 +42,20 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputName">&nbsp Name</label>
-      <input type="text" class="form-control" id="inputName" name="t_name" placeholder="Aungticha Chomwiwat">
+      <input type="text" class="form-control" id="inputName" name="t_name">
+    </div>
+    <div class="form-group col-md-2">
+    <label for="inputSurName">&nbsp Surname</label>
+    <input type="text" class="form-control" id="inputSurName" name="t_surname">
     </div>
     <div class="form-group col-md-2">
     <label for="inputNickName">&nbsp Nickname</label>
-    <input type="text" class="form-control" id="inputNickName" name="t_nickname" placeholder="Ice">
+    <input type="text" class="form-control" id="inputNickName" name="t_nickname">
     </div>
   </div>
   <div class="form-group">
     <label for="inputAge">&nbsp Email</label>
-    <input type="text" class="form-control" id="inputAge" name="t_email" placeholder="youemail@email.com">
+    <input type="text" class="form-control" id="inputAge" name="t_email" placeholder="ex: youemail@email.com">
   </div>
   <div class="form-group">
     <label for="inputPhonenum">&nbsp Phone number</label>
@@ -59,7 +63,7 @@
   </div>
   <div class="form-group">
     <label for="Sex">&nbsp Sex</label>
-    <input type="text" class="form-control" id="Sex" name="t_sex" placeholder="male/female">
+    <input type="text" class="form-control" id="Sex" name="t_sex" placeholder="ex: male/female">
   </div>
   <button type="submit" class="btn btn-primary">Enter</button>
     {% csrf_token %}
